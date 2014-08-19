@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FE2F70AC180B59E400606958"
-               BuildableName = "homecontroller.app"
-               BlueprintName = "homecontroller"
+               BuildableName = "Lines.app"
+               BlueprintName = "Lines"
                ReferencedContainer = "container:homecontroller.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -43,8 +43,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FE2F70AC180B59E400606958"
-            BuildableName = "homecontroller.app"
-            BlueprintName = "homecontroller"
+            BuildableName = "Lines.app"
+            BlueprintName = "Lines"
             ReferencedContainer = "container:homecontroller.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -62,8 +62,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FE2F70AC180B59E400606958"
-            BuildableName = "homecontroller.app"
-            BlueprintName = "homecontroller"
+            BuildableName = "Lines.app"
+            BlueprintName = "Lines"
             ReferencedContainer = "container:homecontroller.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -80,8 +80,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FE2F70AC180B59E400606958"
-            BuildableName = "homecontroller.app"
-            BlueprintName = "homecontroller"
+            BuildableName = "Lines.app"
+            BlueprintName = "Lines"
             ReferencedContainer = "container:homecontroller.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

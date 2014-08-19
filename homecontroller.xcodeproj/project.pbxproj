@@ -23,6 +23,7 @@
 		FE2F70D8180B59E400606958 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2F70B4180B59E400606958 /* UIKit.framework */; };
 		FE2F70E0180B59E500606958 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE2F70DE180B59E500606958 /* InfoPlist.strings */; };
 		FE2F70E2180B59E500606958 /* homecontrollerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2F70E1180B59E500606958 /* homecontrollerTests.m */; };
+		FEF82295182B25D900A282E3 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF82294182B25D900A282E3 /* icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FE2F70AD180B59E400606958 /* homecontroller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = homecontroller.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE2F70AD180B59E400606958 /* Lines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lines.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE2F70B0180B59E400606958 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FE2F70B2180B59E400606958 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		FE2F70B4180B59E400606958 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -58,6 +59,8 @@
 		FE2F70DD180B59E500606958 /* homecontrollerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "homecontrollerTests-Info.plist"; sourceTree = "<group>"; };
 		FE2F70DF180B59E500606958 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FE2F70E1180B59E500606958 /* homecontrollerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = homecontrollerTests.m; sourceTree = "<group>"; };
+		FEF82293182B25C800A282E3 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = homecontroller/icon.png; sourceTree = "<group>"; };
+		FEF82294182B25D900A282E3 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "homecontroller/icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +90,8 @@
 		FE2F70A4180B59E400606958 = {
 			isa = PBXGroup;
 			children = (
+				FEF82294182B25D900A282E3 /* icon@2x.png */,
+				FEF82293182B25C800A282E3 /* icon.png */,
 				FE2F70B6180B59E400606958 /* homecontroller */,
 				FE2F70DB180B59E500606958 /* homecontrollerTests */,
 				FE2F70AF180B59E400606958 /* Frameworks */,
@@ -97,7 +102,7 @@
 		FE2F70AE180B59E400606958 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FE2F70AD180B59E400606958 /* homecontroller.app */,
+				FE2F70AD180B59E400606958 /* Lines.app */,
 				FE2F70D4180B59E400606958 /* homecontrollerTests.xctest */,
 			);
 			name = Products;
@@ -163,9 +168,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FE2F70AC180B59E400606958 /* homecontroller */ = {
+		FE2F70AC180B59E400606958 /* Lines */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FE2F70E5180B59E500606958 /* Build configuration list for PBXNativeTarget "homecontroller" */;
+			buildConfigurationList = FE2F70E5180B59E500606958 /* Build configuration list for PBXNativeTarget "Lines" */;
 			buildPhases = (
 				FE2F70A9180B59E400606958 /* Sources */,
 				FE2F70AA180B59E400606958 /* Frameworks */,
@@ -175,9 +180,9 @@
 			);
 			dependencies = (
 			);
-			name = homecontroller;
+			name = Lines;
 			productName = homecontroller;
-			productReference = FE2F70AD180B59E400606958 /* homecontroller.app */;
+			productReference = FE2F70AD180B59E400606958 /* Lines.app */;
 			productType = "com.apple.product-type.application";
 		};
 		FE2F70D3180B59E400606958 /* homecontrollerTests */ = {
@@ -226,7 +231,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FE2F70AC180B59E400606958 /* homecontroller */,
+				FE2F70AC180B59E400606958 /* Lines */,
 				FE2F70D3180B59E400606958 /* homecontrollerTests */,
 			);
 		};
@@ -241,6 +246,7 @@
 				FE2F70CF180B59E400606958 /* Images.xcassets in Resources */,
 				FE2F70C4180B59E400606958 /* Main_iPhone.storyboard in Resources */,
 				FE2F70BB180B59E400606958 /* InfoPlist.strings in Resources */,
+				FEF82295182B25D900A282E3 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,7 +285,7 @@
 /* Begin PBXTargetDependency section */
 		FE2F70DA180B59E500606958 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FE2F70AC180B59E400606958 /* homecontroller */;
+			target = FE2F70AC180B59E400606958 /* Lines */;
 			targetProxy = FE2F70D9180B59E500606958 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -402,7 +408,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "homecontroller/homecontroller-Prefix.pch";
 				INFOPLIST_FILE = "homecontroller/homecontroller-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -415,7 +423,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "homecontroller/homecontroller-Prefix.pch";
 				INFOPLIST_FILE = "homecontroller/homecontroller-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -474,13 +484,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FE2F70E5180B59E500606958 /* Build configuration list for PBXNativeTarget "homecontroller" */ = {
+		FE2F70E5180B59E500606958 /* Build configuration list for PBXNativeTarget "Lines" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FE2F70E6180B59E500606958 /* Debug */,
 				FE2F70E7180B59E500606958 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FE2F70E8180B59E500606958 /* Build configuration list for PBXNativeTarget "homecontrollerTests" */ = {
 			isa = XCConfigurationList;
@@ -489,6 +500,7 @@
 				FE2F70EA180B59E500606958 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
