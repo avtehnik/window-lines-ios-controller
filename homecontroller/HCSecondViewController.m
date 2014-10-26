@@ -7,13 +7,21 @@
 //
 
 #import "HCSecondViewController.h"
-
+#import "HCRomAdvancedViewController.h"
 @interface HCSecondViewController ()
 
 @end
 
 @implementation HCSecondViewController
 
+- (IBAction)roomMore:(id)sender {
+    
+   HCRomAdvancedViewController *arvc = [[HCRomAdvancedViewController alloc] init];
+    
+    
+     [self presentViewController:arvc animated:YES completion: nil];
+    
+}
 
 -(void)tvCommand:(NSString*) key{
 

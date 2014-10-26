@@ -23,6 +23,9 @@
 		FE2F70D8180B59E400606958 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE2F70B4180B59E400606958 /* UIKit.framework */; };
 		FE2F70E0180B59E500606958 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FE2F70DE180B59E500606958 /* InfoPlist.strings */; };
 		FE2F70E2180B59E500606958 /* homecontrollerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE2F70E1180B59E500606958 /* homecontrollerTests.m */; };
+		FE4BBE3119F1B29F009C2B95 /* HCRomAdvancedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4BBE2F19F1B29F009C2B95 /* HCRomAdvancedViewController.m */; };
+		FE4BBE3219F1B29F009C2B95 /* HCRomAdvancedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE4BBE3019F1B29F009C2B95 /* HCRomAdvancedViewController.xib */; };
+		FEF0C95919BEEB41004A205F /* HCAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FEF0C95819BEEB41004A205F /* HCAudioViewController.m */; };
 		FEF82295182B25D900A282E3 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FEF82294182B25D900A282E3 /* icon@2x.png */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +62,11 @@
 		FE2F70DD180B59E500606958 /* homecontrollerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "homecontrollerTests-Info.plist"; sourceTree = "<group>"; };
 		FE2F70DF180B59E500606958 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		FE2F70E1180B59E500606958 /* homecontrollerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = homecontrollerTests.m; sourceTree = "<group>"; };
+		FE4BBE2E19F1B29F009C2B95 /* HCRomAdvancedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCRomAdvancedViewController.h; sourceTree = "<group>"; };
+		FE4BBE2F19F1B29F009C2B95 /* HCRomAdvancedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCRomAdvancedViewController.m; sourceTree = "<group>"; };
+		FE4BBE3019F1B29F009C2B95 /* HCRomAdvancedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCRomAdvancedViewController.xib; sourceTree = "<group>"; };
+		FEF0C95719BEEB41004A205F /* HCAudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAudioViewController.h; sourceTree = "<group>"; };
+		FEF0C95819BEEB41004A205F /* HCAudioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCAudioViewController.m; sourceTree = "<group>"; };
 		FEF82293182B25C800A282E3 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = homecontroller/icon.png; sourceTree = "<group>"; };
 		FEF82294182B25D900A282E3 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "homecontroller/icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				FE2F70BF180B59E400606958 /* HCAppDelegate.h */,
+				FEF0C95719BEEB41004A205F /* HCAudioViewController.h */,
+				FEF0C95819BEEB41004A205F /* HCAudioViewController.m */,
 				FE2F70C0180B59E400606958 /* HCAppDelegate.m */,
 				FE2F70C2180B59E400606958 /* Main_iPhone.storyboard */,
 				FE2F70C5180B59E400606958 /* Main_iPad.storyboard */,
@@ -132,6 +142,9 @@
 				FE2F70CC180B59E400606958 /* HCSecondViewController.m */,
 				FE2F70CE180B59E400606958 /* Images.xcassets */,
 				FE2F70B7180B59E400606958 /* Supporting Files */,
+				FE4BBE2E19F1B29F009C2B95 /* HCRomAdvancedViewController.h */,
+				FE4BBE2F19F1B29F009C2B95 /* HCRomAdvancedViewController.m */,
+				FE4BBE3019F1B29F009C2B95 /* HCRomAdvancedViewController.xib */,
 			);
 			path = homecontroller;
 			sourceTree = "<group>";
@@ -242,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE4BBE3219F1B29F009C2B95 /* HCRomAdvancedViewController.xib in Resources */,
 				FE2F70C7180B59E400606958 /* Main_iPad.storyboard in Resources */,
 				FE2F70CF180B59E400606958 /* Images.xcassets in Resources */,
 				FE2F70C4180B59E400606958 /* Main_iPhone.storyboard in Resources */,
@@ -268,6 +282,8 @@
 				FE2F70BD180B59E400606958 /* main.m in Sources */,
 				FE2F70CD180B59E400606958 /* HCSecondViewController.m in Sources */,
 				FE2F70CA180B59E400606958 /* HCFirstViewController.m in Sources */,
+				FEF0C95919BEEB41004A205F /* HCAudioViewController.m in Sources */,
+				FE4BBE3119F1B29F009C2B95 /* HCRomAdvancedViewController.m in Sources */,
 				FE2F70C1180B59E400606958 /* HCAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
