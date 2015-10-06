@@ -226,6 +226,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "vitaliy pitvalo";
 				TargetAttributes = {
+					FE2F70AC180B59E400606958 = {
+						DevelopmentTeam = TXUWKX32V7;
+					};
 					FE2F70D3180B59E400606958 = {
 						TestTargetID = FE2F70AC180B59E400606958;
 					};

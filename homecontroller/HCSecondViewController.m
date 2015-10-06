@@ -100,10 +100,18 @@
 - (IBAction)roomFlip:(id)sender {
     
     
-    NSURL *url = [NSURL URLWithString:[ NSString stringWithFormat:  @"http://192.168.1.54/password/?pg=4&n=6"]];
-    NSData *data = [NSData dataWithContentsOfURL:url];
-    NSString *ret = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    NSLog(@"ret=%@", ret);
+    dispatch_queue_t taskQ = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    dispatch_async(taskQ,
+                   ^{
+                       
+                       NSURL *url = [NSURL URLWithString:[ NSString stringWithFormat:  @"http://192.168.1.33/light?task=toggle"]];
+                       NSData *data = [NSData dataWithContentsOfURL:url];
+                       NSString *ret = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                       NSLog(@"ret=%@ %d", ret, [sender tag]);
+                   });
+    
+
 
     
 //     dispatch_queue_t taskQ = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);

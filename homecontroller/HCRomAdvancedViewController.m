@@ -62,7 +62,7 @@
     dispatch_async(taskQ,
                    ^{
                        
-                       NSURL *url = [NSURL URLWithString:[ NSString stringWithFormat:  @"http://192.168.1.5:82/?task=ligth&type=toggle&lamp=%d",[sender tag]]];
+                       NSURL *url = [NSURL URLWithString:[ NSString stringWithFormat:  @"http://192.168.1.33/bulb?task=toggle&index=%d",[sender tag]]];
                        NSData *data = [NSData dataWithContentsOfURL:url];
                        NSString *ret = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
                        NSLog(@"ret=%@ %d", ret, [sender tag]);
@@ -86,7 +86,7 @@
     dispatch_async(taskQ,
                    ^{
                        
-                       NSURL *url = [NSURL URLWithString:[ NSString stringWithFormat:  @"http://192.168.1.5:82/?task=ligth&type=allon"]];
+                       NSURL *url = [NSURL URLWithString:[ NSString stringWithFormat:  @"http://192.168.1.33/light?task=on"]];
                        NSData *data = [NSData dataWithContentsOfURL:url];
                        NSString *ret = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
                        NSLog(@"ret=%@ %d", ret, [sender tag]);
@@ -100,7 +100,7 @@
     dispatch_async(taskQ,
                    ^{
                        
-                       NSURL *url = [NSURL URLWithString:[ NSString stringWithFormat:  @"http://192.168.1.5:82/?task=ligth&type=alloff"]];
+                       NSURL *url = [NSURL URLWithString:[ NSString stringWithFormat:  @"http://192.168.1.33/light?task=off"]];
                        NSData *data = [NSData dataWithContentsOfURL:url];
                        NSString *ret = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
                        NSLog(@"ret=%@ %d", ret, [sender tag]);

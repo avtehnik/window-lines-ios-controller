@@ -18,4 +18,6 @@
 @property (weak, nonatomic) IBOutlet UISlider *rearLeftVolume;
 @property (weak, nonatomic) IBOutlet UISlider *rearRigthVolume;
 
+@property (strong, nonatomic) NSMutableArray *volumes;
+
 @end

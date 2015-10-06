@@ -8,10 +8,32 @@
 
 #import "HCAudioViewController.h"
 
-
-
 @implementation HCAudioViewController
 
+
+
+-(void)viewDidLoad{
+    
+    [self.volumes insertObject:[NSNumber numberWithInteger:1]atIndex:0];
+    [self.volumes insertObject:[NSNumber numberWithInteger:1]atIndex:1];
+    [self.volumes insertObject:[NSNumber numberWithInteger:1]atIndex:2];
+    [self.volumes insertObject:[NSNumber numberWithInteger:1]atIndex:3];
+    [self.volumes insertObject:[NSNumber numberWithInteger:1]atIndex:4];
+    [self.volumes insertObject:[NSNumber numberWithInteger:1]atIndex:5];
+    [self.volumes insertObject:[NSNumber numberWithInteger:1]atIndex:6];
+    [self.volumes insertObject:[NSNumber numberWithInteger:1]atIndex:7];
+    
+    self.mainVolume.continuous = NO;
+    self.centerVolume.continuous = NO;
+    self.subwofwerVolume.continuous = NO;
+    self.frontLeftVlume.continuous = NO;
+    self.frontRigthVolume.continuous = NO;
+    self.rearLeftVolume.continuous = NO;
+    self.rearRigthVolume.continuous = NO;
+
+    
+    
+}
 
 
 -(void)viewDidAppear:(BOOL)animated{
@@ -67,37 +89,22 @@
 
 -(void)setSource:(NSString*) src{
     
-    dispatch_queue_t taskQ = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    
-    dispatch_async(taskQ,
-                   ^{
-                       NSURL *url = [NSURL URLWithString:[ NSString stringWithFormat:  @"http://192.168.1.5:82?task=souce&value=%@",src]];
-                       NSData *data = [NSData dataWithContentsOfURL:url];
-                       NSString *ret = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                       NSLog(@"src %@ , ret=%@",src, ret);
-                   });
     
 }
 - (IBAction)source:(UISegmentedControl*)control {
-    switch ([control selectedSegmentIndex]) {
-        case 0:
-            [self setSource: @"5.1"];
-            break;
-        case 1:
-            [self setSource: @"aux1"];
-            break;
-        case 2:
-            [self setSource: @"aux2"];
-            break;
-        case 3:
-            [self setSource: @"aux3"];
-            break;
-        case 4:
-            [self setSource: @"aux4"];
-            break;
-        default:
-            break;
-    }
+    
+    int srcIndex = [control selectedSegmentIndex];
+    
+    dispatch_queue_t taskQ = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    dispatch_async(taskQ,^{
+                       NSURL *url = [NSURL URLWithString:[ NSString stringWithFormat:  @"http://192.168.1.17/source?source=%d",srcIndex]];
+                       NSData *data = [NSData dataWithContentsOfURL:url];
+                       NSString *ret = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                       NSLog(@"src %d , ret=%@",srcIndex, ret);
+                   });
+
+    
     
     
 }
@@ -105,22 +112,26 @@
 
 -(void)setVolume:(int)chanel value:(int) value {
     
-//    CHAN_ALL    0
-//    CHAN_FL     1
-//    CHAN_FR     2
-//    CHAN_RL     3
-//    CHAN_RR     4
-//    CHAN_CEN    5
-//    CHAN_SW     6
+    NSLog(@" %i %i ",[[self.volumes objectAtIndex:chanel] integerValue], value);
     
-    //dispatch_queue_t taskQ = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    //dispatch_async(taskQ,
-        //           ^{
-    NSURL *url = [NSURL URLWithString:[ NSString stringWithFormat:  @"http://192.168.1.5:82?task=volume&type=chanel&chanel=%i&value=%i",chanel ,value ]];
+    if([[self.volumes objectAtIndex:chanel] integerValue] != value){
+    
+    dispatch_queue_t taskQ = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(taskQ,
+                  ^{
+    NSURL *url = [NSURL URLWithString:[ NSString stringWithFormat:  @"http://192.168.1.17/volume?channel=%i&value=%i",chanel ,value ]];
     NSData *data = [NSData dataWithContentsOfURL:url];
     NSString *ret = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     NSLog(@" channel %i, value %i, ret=%@",chanel,value, ret);
-      //             });
+                   });
+    
+    }
+    
+    
+    [self.volumes insertObject:[NSNumber numberWithInteger:value] atIndex:chanel];
+
+    NSLog(@" %i 2 %i ",[[self.volumes objectAtIndex:chanel] integerValue], value);
+    
 }
 
 - (IBAction)allVolume:(UISlider*)sender{
